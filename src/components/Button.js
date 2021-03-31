@@ -9,22 +9,22 @@ export class Button extends Component {
   }
 
   componentDidMount() {
-    document.title = "El boton no ha sido clickeado";
+    console.log("El boton no ha sido clickeado");
   }
 
   componentDidUpdate() {
-    document.title = `clikeado ${this.state.count} veces`;
+    console.log(`clikeado ${this.state.count} veces`);
   }
 
   componentWillUnmount() {
-    document.title = "Boton removido del dom";
+    console.log(`Boton removido del dom ${this.state.count} `);
   }
 
   render() {
     const { count } = this.state;
     return (
       <div>
-        <p>Hook {count}</p>
+        <p>{count}</p>
         <button onClick={() => this.setState({ count: count + 1 })}>
           Click me
         </button>

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useMemo } from "react";
 
 const fetchData = () => {
   // Imagina un API call aqui
@@ -23,7 +23,7 @@ const CounterMemo = () => {
     setData(data);
   }, []);
 
-  const result = runHeavyCalc(data);
+  const result = useMemo(() => runHeavyCalc(data), [data]);
 
   return (
     <div className="App">

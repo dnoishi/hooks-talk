@@ -36,3 +36,16 @@
     transform: rotate(360deg);
   }
 }
+
+.box {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background: green;
+  color: white;
+}
+
+.msg {
+  position: relative;
+  border: 1px solid red;
+}
